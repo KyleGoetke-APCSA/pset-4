@@ -28,15 +28,15 @@ public class ProblemSet4 {
         // comment out or uncomment as needed
 
         ps.sum();
-        ps.reverse();
-        ps.digits();
-        ps.average();
-        ps.prime();
-        ps.fibonacci();
-        ps.factors();
-        ps.mario();
-        ps.luigi();
-        ps.credit();
+        // ps.reverse();
+        // ps.digits();
+        // ps.average();
+        // ps.prime();
+        // ps.fibonacci();
+        // ps.factors();
+        // ps.mario();
+        // ps.luigi();
+        // ps.credit();
 
         in.close();
     }
@@ -52,7 +52,32 @@ public class ProblemSet4 {
      */
 
     public void sum() {
+		long lowerBound;
+		long upperBound;
+		long integerSum = 0;
 
+		System.out.print("\n");
+
+		// makes sure that lowerBound is less than upperBound
+		do {
+			System.out.print("Lower bound: ");
+	        lowerBound = in.nextLong();
+			System.out.print("Upper bound: ");
+	        upperBound = in.nextLong();
+		} while (lowerBound > upperBound);
+
+		// checks if lowerBound is even - if not, increases lowerBound
+		if (lowerBound % 2 != 0) {
+			lowerBound += 1;
+		}
+
+		// as long as lowerBound > upperBound, integerSum increases
+		for (long i = lowerBound; i <= upperBound; i += 2) {
+			integerSum += i;
+		}
+
+	   // prints the final sum
+	   System.out.printf("\n%,d.\n", integerSum);
     }
 
     /*

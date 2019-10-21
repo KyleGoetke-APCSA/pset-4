@@ -164,7 +164,17 @@ public class ProblemSet4 {
      */
 
     public void average() {
+		// initialize variables
+		long integer = 0;
 
+		// inserts blank space
+		System.out.print("\n");
+
+		// makes sure that the integer is in the correct range
+		do {
+	        System.out.print("Non-negative integer: ");
+	        integer = in.nextLong();
+		} while (integer <= 0);
     }
 
     /*

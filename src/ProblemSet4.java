@@ -28,8 +28,8 @@ public class ProblemSet4 {
         // comment out or uncomment as needed
 
         // ps.sum();
-        ps.reverse();
-        // ps.digits();
+        // ps.reverse();
+        ps.digits();
         // ps.average();
         // ps.prime();
         // ps.fibonacci();
@@ -126,7 +126,33 @@ public class ProblemSet4 {
      */
 
     public void digits() {
+		// initialize variables
+		long integer = 0;
+		long digit = 0;
+		long total = 0;
 
+		// inserts blank space
+		System.out.print("\n");
+
+		// makes sure that the integer is in the correct range
+		do {
+	        System.out.print("Positive integer: ");
+	        integer = in.nextLong();
+		} while (integer <= 0);
+
+		// runs as long as integer > 0
+		while (integer > 0) {
+			digit = integer % 10;
+			// gets odd digits
+			if (digit % 2 != 0) {
+				total += digit;
+				integer /= 10;
+			} else {
+				integer /= 10;
+			}
+		}
+		// prints final answer
+		System.out.println("\n" + total + ".");
     }
 
     /*

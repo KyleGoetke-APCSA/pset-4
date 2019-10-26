@@ -29,8 +29,8 @@ public class ProblemSet4 {
 
         // ps.sum();
         // ps.reverse();
-        ps.digits();
-        // ps.average();
+        // ps.digits();
+        ps.average();
         // ps.prime();
         // ps.fibonacci();
         // ps.factors();
@@ -165,19 +165,31 @@ public class ProblemSet4 {
      */
 
     public void average() {
+
 		// initialize variables
 		long integer = 0;
+		long sum = 0;
+        int numberOfValues = 0;
 
 		// inserts blank space
 		System.out.print("\n");
 
 		// makes sure that the integer is in the correct range
-		do {
-	        System.out.print("Non-negative integer: ");
-	        integer = in.nextLong();
-		} while (integer <= 0);
+        do {
+            System.out.print("Non-negative integer: ");
+            integer = in.nextInt();
+            in.nextLine();
+            if (integer >= 0) {
+                sum += integer;
+                numberOfValues++;
+            }
+        } while (integer >= 0);
+        double avg = (double) sum / numberOfValues;
+
+		// prints final answer
+        System.out.printf("\n%,.2f.\n", avg);
     }
-	
+
 
     /*
      * Exercise 5.

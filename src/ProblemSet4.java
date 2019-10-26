@@ -244,11 +244,13 @@ public class ProblemSet4 {
         // inserts blank space
         System.out.print("\n");
 
-        while (integer < 1 || integer > 92) {
+        // makes sure that the input is in the correct range
+        do {
             System.out.print("Positive integer: ");
             integer = in.nextInt();
-        }
+        } while (integer <= 0 || integer >= 93);
 
+        // fibonacci sequence math
         for (int i = 1; i < integer; i++) {
             integer3 = integer1 + integer2;
             integer1 = integer2;

@@ -34,7 +34,7 @@ public class ProblemSet4 {
         // ps.prime();
         // ps.fibonacci();
         // ps.factors();
-        ps.mario();
+        // ps.mario();
         ps.luigi();
         // ps.credit();
 
@@ -111,7 +111,7 @@ public class ProblemSet4 {
 		// prints the reversed integer
 		for (int i = stringLength; i > 0; i--) {
 			if (i == 1) {
-				System.out.printf("%s.\n\n", integerString.substring(i-1, i));
+				System.out.printf("%s.\n", integerString.substring(i-1, i));
 			} else {
 				System.out.printf("%s, ", integerString.substring(i-1, i));
 			}
@@ -288,6 +288,8 @@ public class ProblemSet4 {
                 System.out.print(", " + i + ", " + integer / i);
             }
         }
+        System.out.print(".");
+
         // inserts blank space
         System.out.print("\n");
     }
@@ -340,7 +342,46 @@ public class ProblemSet4 {
      */
 
     public void luigi() {
-        
+        // initialize variables
+        int height = 0;
+        int numOfSpaces = 0;
+        int numOfBlocks = 0;
+
+        // inserts blank space
+        System.out.print("\n");
+
+        // makes sure that the input is in the correct range
+        do {
+            System.out.print("Height: ");
+            height = in.nextInt();
+        } while (height <= 0 || height >= 25);
+
+        // runs for the total height
+        for (int i = 0; i < height; i++) {
+            System.out.println();
+
+            numOfSpaces = height - i - 1;
+            for (int j = 0; j < numOfSpaces; j ++) {
+                System.out.print(" ");
+            }
+
+            numOfBlocks = i + 2;
+            for (int j = 0; j < numOfBlocks; j ++) {
+                System.out.print("#");
+            }
+
+            System.out.print("  ");
+
+            for (int j = 0; j < numOfBlocks; j ++) {
+                System.out.print("#");
+            }
+
+            for (int j = 0; j < numOfSpaces; j ++) {
+                System.out.print(" ");
+            }
+        }
+        // inserts blank space
+        System.out.print("\n");
     }
 
     /*

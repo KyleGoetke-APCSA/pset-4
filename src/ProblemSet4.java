@@ -177,6 +177,7 @@ public class ProblemSet4 {
 	        integer = in.nextLong();
 		} while (integer <= 0);
     }
+	
 
     /*
      * Exercise 5.

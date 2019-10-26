@@ -129,7 +129,7 @@ public class ProblemSet4 {
 		// initialize variables
 		long integer = 0;
 		long digit = 0;
-		long total = 0;
+		long sum = 0;
 
 		// inserts blank space
 		System.out.print("\n");
@@ -145,14 +145,15 @@ public class ProblemSet4 {
 			digit = integer % 10;
 			// gets odd digits
 			if (digit % 2 != 0) {
-				total += digit;
+				sum += digit;
 				integer /= 10;
 			} else {
 				integer /= 10;
 			}
 		}
+
 		// prints final answer
-		System.out.println("\n" + total + ".");
+		System.out.println("\n" + sum + ".");
     }
 
     /*

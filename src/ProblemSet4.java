@@ -32,8 +32,8 @@ public class ProblemSet4 {
         // ps.digits();
         // ps.average();
         // ps.prime();
-        ps.fibonacci();
-        // ps.factors();
+        // ps.fibonacci();
+        ps.factors();
         // ps.mario();
         // ps.luigi();
         // ps.credit();
@@ -239,7 +239,7 @@ public class ProblemSet4 {
         int integer = -1;
         int integer1 = 0;
         int integer2 = 1;
-        int integer3 = 0;;
+        int integer3 = 0;
 
         // inserts blank space
         System.out.print("\n");
@@ -268,7 +268,28 @@ public class ProblemSet4 {
      */
 
     public void factors() {
+        // initialize variables
+        long integer;
 
+        // inserts blank space
+        System.out.print("\n");
+
+        // makes sure that the input is in the correct range
+        do {
+            System.out.print("Positive integer: ");
+            integer = in.nextLong();
+        } while (integer <= 0);
+
+
+        // prints factors
+        System.out.print("\n1, " + integer);
+        for (int i = 2; i <= integer / i; i++) {
+            if (integer % i == 0) {
+                System.out.print(", " + i + ", " + integer / i);
+            }
+        }
+        // inserts blank space
+        System.out.print("\n");
     }
 
     /*
@@ -279,7 +300,7 @@ public class ProblemSet4 {
      */
 
     public void mario() {
-
+        
     }
 
     /*

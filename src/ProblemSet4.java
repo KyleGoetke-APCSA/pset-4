@@ -33,9 +33,9 @@ public class ProblemSet4 {
         // ps.average();
         // ps.prime();
         // ps.fibonacci();
-        ps.factors();
-        // ps.mario();
-        // ps.luigi();
+        // ps.factors();
+        ps.mario();
+        ps.luigi();
         // ps.credit();
 
         in.close();
@@ -300,7 +300,36 @@ public class ProblemSet4 {
      */
 
     public void mario() {
-        
+        // initialize variables
+        int height = 0;
+        int numOfSpaces = 0;
+        int numOfBlocks = 0;
+
+        // inserts blank space
+        System.out.print("\n");
+
+        // makes sure that the input is in the correct range
+        do {
+            System.out.print("Height: ");
+            height = in.nextInt();
+        } while (height <= 0 || height >= 25);
+
+        // runs for the total height
+        for (int i = 0; i < height; i++) {
+            System.out.println();
+
+            numOfSpaces = height - i - 1;
+            for (int j = 0; j < numOfSpaces; j ++) {
+                System.out.print(" ");
+            }
+
+            numOfBlocks = i + 2;
+            for (int j = 0; j < numOfBlocks; j ++) {
+                System.out.print("#");
+            }
+        }
+        // inserts blank space
+        System.out.print("\n");
     }
 
     /*
@@ -311,7 +340,7 @@ public class ProblemSet4 {
      */
 
     public void luigi() {
-
+        
     }
 
     /*

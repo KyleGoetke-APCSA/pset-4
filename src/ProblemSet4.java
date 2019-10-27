@@ -62,19 +62,19 @@ public class ProblemSet4 {
         // makes sure that lowerBound < upperBound
         do {
         System.out.print("Lower bound: ");
-                lowerBound = in.nextLong();
+        lowerBound = in.nextLong();
         System.out.print("Upper bound: ");
-                upperBound = in.nextLong();
+        upperBound = in.nextLong();
         } while (lowerBound > upperBound);
 
         // checks if lowerBound is even - if not, increases lowerBound
         if (lowerBound % 2 != 0) {
-        lowerBound += 1;
+            lowerBound += 1;
         }
 
         // as long as lowerBound > upperBound, integerSum increases
         for (long i = lowerBound; i <= upperBound; i += 2) {
-        integerSum += i;
+            integerSum += i;
         }
 
        // prints the final sum
@@ -125,13 +125,13 @@ public class ProblemSet4 {
      */
 
     public void digits() {
-    // initialize variables
-    long integer = 0;
-    long digit = 0;
-    long sum = 0;
+        // initialize variables
+        long integer = 0;
+        long digit = 0;
+        long sum = 0;
 
-    // inserts blank space
-    System.out.print("\n");
+        // inserts blank space
+        System.out.print("\n");
 
         // makes sure that the integer is in the correct range
         do {

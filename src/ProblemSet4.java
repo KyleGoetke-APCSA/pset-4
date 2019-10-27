@@ -26,7 +26,6 @@ public class ProblemSet4 {
         ProblemSet4 ps = new ProblemSet4();
 
         // comment out or uncomment as needed
-
         ps.sum();
         ps.reverse();
         ps.digits();

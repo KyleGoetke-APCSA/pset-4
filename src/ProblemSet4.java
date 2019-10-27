@@ -391,12 +391,13 @@ public class ProblemSet4 {
     public void credit() {
         // initialize variables
         long cardNumber = 0;
-        // String sumOneString = "";
-        int sumTwo = 0;
-        int sumOne = 0;
+        int firstSum = 0;
+        int secondSum = 0;
+        String sumString = "";
         String typeOfCard = "";
         String cardString = "";
-        // Sets default value to invalid
+
+        // Sets default value to Invalid
         typeOfCard = "Invalid";
 
         // inserts blank space
@@ -409,13 +410,27 @@ public class ProblemSet4 {
             cardString = Long.toString(cardNumber);
         } while (cardNumber <= 0);
 
+        // math for Luhn's algorithm
+        cardString = Long.toString(cardNumber);
+        for (int i = cardString.length() - 2; i > -1; i -= 2) {
+            sumString += Integer.toString(2 * Integer.parseInt(cardString.substring(i, i + 1)));
+        }
+
+        for (int i = sumString.length() - 1; i >= 0; i --) {
+            firstSum += Integer.parseInt(sumString.substring(i, i + 1));
+        }
+
+        for (int i = cardString.length() - 1; i >= 0; i -= 2 ) {
+            secondSum += Integer.parseInt(cardString.substring(i, i + 1));
+        }
+
         if (cardString.length() == 15 && (cardString.substring(0, 2).equals("37") ||
-          cardString.substring(0, 2).equals("34")) && ((sumOne + sumTwo) % 10 == 0)) {
+          cardString.substring(0, 2).equals("34")) && ((firstSum + secondSum) % 10 == 0)) {
             typeOfCard = "Amex";
-        } else if ((cardString.length() == 16 || cardString.length() == 13) && ((sumOne + sumTwo) % 10 == 0) &&
+        } else if ((cardString.length() == 16 || cardString.length() == 13) && ((firstSum + secondSum) % 10 == 0) &&
           (cardString.substring(0, 1).equals("4"))) {
             typeOfCard = "Visa";
-        } else if (cardString.length() == 16 && ((sumOne + sumTwo) % 10 == 0)) {
+        } else if (cardString.length() == 16 && ((firstSum + secondSum) % 10 == 0)) {
             switch (cardString.substring(0, 2)) {
                 case "51":
                     typeOfCard = "Mastercard";

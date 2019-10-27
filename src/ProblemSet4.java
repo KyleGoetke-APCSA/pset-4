@@ -410,7 +410,7 @@ public class ProblemSet4 {
             cardString = Long.toString(cardNumber);
         } while (cardNumber <= 0);
 
-        // math for Luhn's algorithm
+        // math for the algorithm
         cardString = Long.toString(cardNumber);
         for (int i = cardString.length() - 2; i > -1; i -= 2) {
             sumString += Integer.toString(2 * Integer.parseInt(cardString.substring(i, i + 1)));

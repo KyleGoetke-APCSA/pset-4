@@ -89,32 +89,32 @@ public class ProblemSet4 {
      */
 
     public void reverse() {
-    // initialize variables
-    int integer = 0;
+        // initialize variables
+        int integer = 0;
 
-    // inserts blank space
-    System.out.print("\n");
+        // inserts blank space
+        System.out.print("\n");
 
-    // makes sure that the integer is in the correct range
-    do {
-    System.out.print("Positive integer: ");
+        // makes sure that the integer is in the correct range
+        do {
+            System.out.print("Positive integer: ");
             integer = in.nextInt();
-    } while (integer <= 0);
+        } while (integer <= 0);
 
-    String integerString = Long.toString(integer);
-    int stringLength = integerString.length();
+        String integerString = Long.toString(integer);
+        int stringLength = integerString.length();
 
-    // inserts blank space
-    System.out.print("\n");
+        // inserts blank space
+        System.out.print("\n");
 
-    // prints the reversed integer
-    for (int i = stringLength; i > 0; i--) {
-    if (i == 1) {
-    System.out.printf("%s.\n", integerString.substring(i-1, i));
-    } else {
-    System.out.printf("%s, ", integerString.substring(i-1, i));
-    }
-    }
+        // prints the reversed integer
+        for (int i = stringLength; i > 0; i--) {
+            if (i == 1) {
+                System.out.printf("%s.\n", integerString.substring(i-1, i));
+            } else {
+                System.out.printf("%s, ", integerString.substring(i-1, i));
+            }
+        }
     }
 
     /*
@@ -133,26 +133,26 @@ public class ProblemSet4 {
     // inserts blank space
     System.out.print("\n");
 
-    // makes sure that the integer is in the correct range
-    do {
+        // makes sure that the integer is in the correct range
+        do {
             System.out.print("Positive integer: ");
             integer = in.nextLong();
-    } while (integer <= 0);
+        } while (integer <= 0);
 
-    // runs as long as integer > 0
-    while (integer > 0) {
-    digit = integer % 10;
-    // gets odd digits
-    if (digit % 2 != 0) {
-    sum += digit;
-    integer /= 10;
-    } else {
-    integer /= 10;
-    }
-    }
+        // runs as long as integer > 0
+        while (integer > 0) {
+            digit = integer % 10;
+            // gets odd digits
+            if (digit % 2 != 0) {
+                sum += digit;
+                integer /= 10;
+            } else {
+                integer /= 10;
+            }
+        }
 
-    // prints final answer
-    System.out.println("\n" + sum + ".");
+        // prints final answer
+        System.out.println("\n" + sum + ".");
     }
 
     /*
@@ -164,15 +164,15 @@ public class ProblemSet4 {
      */
 
     public void average() {
-    // initialize variables
-    long integer = 0;
-    long sum = 0;
-        int numberOfValues = 0;
+        // initialize variables
+        long integer = 0;
+        long sum = 0;
+            int numberOfValues = 0;
 
-    // inserts blank space
-    System.out.print("\n");
+        // inserts blank space
+        System.out.print("\n");
 
-    // makes sure that the integer is in the correct range
+        // makes sure that the integer is in the correct range
         do {
             System.out.print("Non-negative integer: ");
             integer = in.nextInt();
@@ -184,7 +184,7 @@ public class ProblemSet4 {
         } while (integer >= 0);
         double avg = (double) sum / numberOfValues;
 
-    // prints final answer
+        // prints final answer
         System.out.printf("\n%,.2f.\n", avg);
     }
 
@@ -196,34 +196,32 @@ public class ProblemSet4 {
      */
 
     public void prime() {
-    // initialize variables
-    long integer;
-    boolean isPrime = true;
+        // initialize variables
+        long integer;
+        boolean isPrime = true;
 
-    // inserts blank space
-    System.out.print("\n");
+        // inserts blank space
+        System.out.print("\n");
 
-    // makes sure that the input is in the correct range
+        // makes sure that the input is in the correct range
         do {
             System.out.print("Non-negative integer: ");
             integer = in.nextLong();
         } while (integer < 0);
 
-        for (int i = 2; i <= integer / 2; ++i)
-        {
+        for (int i = 2; i <= integer / 2; ++i) {
             // condition for nonprime number
-            if(integer % i == 0)
-            {
+            if (integer % i == 0) {
                 isPrime = false;
                 break;
             }
         }
 
-    // sets final answer based on isPrime
-    String result = (isPrime) ? "Prime" : "Not prime";
+        // sets final answer based on isPrime
+        String result = (isPrime) ? "Prime" : "Not prime";
 
-    // prints final answer
-    System.out.printf("\n%s.\n", result);
+        // prints final answer
+        System.out.printf("\n%s.\n", result);
     }
 
     /*

@@ -167,7 +167,7 @@ public class ProblemSet4 {
         // initialize variables
         long integer = 0;
         long sum = 0;
-            int numberOfValues = 0;
+        int numberOfValues = 0;
 
         // inserts blank space
         System.out.print("\n");

@@ -27,16 +27,16 @@ public class ProblemSet4 {
 
         // comment out or uncomment as needed
 
-        // ps.sum();
-        // ps.reverse();
-        // ps.digits();
-        // ps.average();
-        // ps.prime();
-        // ps.fibonacci();
-        // ps.factors();
-        // ps.mario();
+        ps.sum();
+        ps.reverse();
+        ps.digits();
+        ps.average();
+        ps.prime();
+        ps.fibonacci();
+        ps.factors();
+        ps.mario();
         ps.luigi();
-        // ps.credit();
+        ps.credit();
 
         in.close();
     }
@@ -220,7 +220,7 @@ public class ProblemSet4 {
             }
         }
 
-		// sets final answer
+		// sets final answer based on isPrime
 		String result = (isPrime) ? "Prime" : "Not prime";
 
 		// prints final answer
@@ -392,6 +392,53 @@ public class ProblemSet4 {
      */
 
     public void credit() {
+        // initialize variables
+        long cardNumber = 0;
+        // String sumOneString = "";
+        int sumTwo = 0;
+        int sumOne = 0;
+        String typeOfCard = "";
+        String cardString = "";
+        // Sets default value to invalid
+        typeOfCard = "Invalid";
 
+        // inserts blank space
+        System.out.print("\n");
+
+        // gets input from user
+        do {
+            System.out.print("Number: ");
+            cardNumber = in .nextLong();
+            cardString = Long.toString(cardNumber);
+        } while (cardNumber <= 0);
+
+        if (cardString.length() == 15 && (cardString.substring(0, 2).equals("37") ||
+          cardString.substring(0, 2).equals("34")) && ((sumOne + sumTwo) % 10 == 0)) {
+            typeOfCard = "Amex";
+        } else if ((cardString.length() == 16 || cardString.length() == 13) && ((sumOne + sumTwo) % 10 == 0) &&
+          (cardString.substring(0, 1).equals("4"))) {
+            typeOfCard = "Visa";
+        } else if (cardString.length() == 16 && ((sumOne + sumTwo) % 10 == 0)) {
+            switch (cardString.substring(0, 2)) {
+                case "51":
+                    typeOfCard = "Mastercard";
+                    break;
+                case "52":
+                    typeOfCard = "Mastercard";
+                    break;
+                case "53":
+                    typeOfCard = "Mastercard";
+                    break;
+                case "54":
+                    typeOfCard = "Mastercard";
+                    break;
+                case "55":
+                    typeOfCard = "Mastercard";
+                    break;
+            }
+        }
+
+        // prints final answer
+        System.out.printf("\n%s.\n", typeOfCard);
     }
 }

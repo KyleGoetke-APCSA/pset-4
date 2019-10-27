@@ -51,31 +51,31 @@ public class ProblemSet4 {
      */
 
     public void sum() {
-    // initialize variables
-    long lowerBound;
-    long upperBound;
-    long integerSum = 0;
+        // initialize variables
+        long lowerBound;
+        long upperBound;
+        long integerSum = 0;
 
-    // inserts blank space
-    System.out.print("\n");
+        // inserts blank space
+        System.out.print("\n");
 
-    // makes sure that lowerBound < upperBound
-    do {
-    System.out.print("Lower bound: ");
-            lowerBound = in.nextLong();
-    System.out.print("Upper bound: ");
-            upperBound = in.nextLong();
-    } while (lowerBound > upperBound);
+        // makes sure that lowerBound < upperBound
+        do {
+        System.out.print("Lower bound: ");
+                lowerBound = in.nextLong();
+        System.out.print("Upper bound: ");
+                upperBound = in.nextLong();
+        } while (lowerBound > upperBound);
 
-    // checks if lowerBound is even - if not, increases lowerBound
-    if (lowerBound % 2 != 0) {
-    lowerBound += 1;
-    }
+        // checks if lowerBound is even - if not, increases lowerBound
+        if (lowerBound % 2 != 0) {
+        lowerBound += 1;
+        }
 
-    // as long as lowerBound > upperBound, integerSum increases
-    for (long i = lowerBound; i <= upperBound; i += 2) {
-    integerSum += i;
-    }
+        // as long as lowerBound > upperBound, integerSum increases
+        for (long i = lowerBound; i <= upperBound; i += 2) {
+        integerSum += i;
+        }
 
        // prints the final sum
        System.out.printf("\n%,d.\n", integerSum);
